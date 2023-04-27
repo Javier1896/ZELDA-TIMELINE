@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 10;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 16px/1.5 'Helvetica Neue', sans-serif;
+  background: #455946;
+  color: #000000;
+  overflow-x: hidden;
+  padding-bottom: 0px;
+}
+
+/* INTRO SECTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.intro {
+  background: #455946;
+  padding: 100px 0;
+  font-family: 'Bruno Ace', cursive;
+  color: #fff;
+  text-shadow: 0 0 8px;
+  letter-spacing: 5px;
+}
+.img {
+  height: 200px;
+}
+
+.a1 {
+  font-size: 1.2rem;
+  font-family: 'Bruno Ace', cursive;
+  font-weight: bold;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.zelda ul {
+  background: #718f54;
+  padding: 50px 0;
+}
+
+.zelda ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
+  box-shadow: 0 0 10px;
+}
+
+/*.zelda ul li ::after {
+  content: '';
+  position: absolute;
+  left: -17%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+  z-index: 1;
+}*/
+
+.zelda ul li article {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background: #e2c15faf;
+}
+
+.zelda ul li article::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.zelda ul li article img {
+  width: 100%;
+}
+
+/*.zelda ul li:nth-child(odd) article {
+  left: 45px;
+}*/
+
+.zelda ul li:nth-child(odd) article::before {
+  left: -16px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #000000af transparent transparent;
+}
+
+.zelda ul li:nth-child(odd) article {
+  left: 45px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #b5922baf transparent transparent;
+}
+
+.zelda ul li:nth-child(even) article {
+  left: -439px;
+}
+
+.zelda ul li:nth-child(even) article::before {
+  right: -16px;
+  border-width: 8px 0px 8px 16px;
+  border-color: transparent transparent transparent #000000af;
+}
+
+article {
+  display: block;
+  font-size: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 0px;
+  box-shadow: 0 0 10px;
+}
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/*.zelda ul li::after {
+  transition: background 0.5s ease-in-out;
+}
+
+.zelda ul li.in-view::after {
+  background: #f45b69;
+}
+
+.zelda ul li article {
+  visibility: visible;
+  opacity: 10;
+  transition: all 0.5s ease-in-out;
+}
+
+.zelda ul li:nth-child(odd) article {
+  transform: translate3d(200px, 0, 0);
+}
+
+.zelda ul li:nth-child(even) article {
+  transform: translate3d(-200px, 0, 0);
+}
+
+.zelda ul li.in-view article {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+*/
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+  .zelda ul li article {
+    width: 250px;
+  }
+  .zelda ul li:nth-child(even) article {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .zelda ul li {
+    margin-left: 20px;
+  }
+  .zelda ul li article {
+    width: calc(100vw - 91px);
+  }
+  .zelda ul li:nth-child(even) article {
+    left: 45px;
+  }
+  .zelda ul li:nth-child(even) article::before {
+    left: -16px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #000000af transparent transparent;
+  }
+}
+
+/* EXTRA/CLIP PATH STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* .timeline-clippy ul li::after {
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+}
+
+.timeline-rhombus ul li::after {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.timeline-rhombus ul li div::before {
+  bottom: 12px;
+}
+
+.timeline-star ul li::after {
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.timeline-heptagon ul li::after {
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
+}
+
+.timeline-infinite ul li::after {
+  animation: scaleAnimation 2s infinite;
+} */
+
+@keyframes scaleAnimation {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.25);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
