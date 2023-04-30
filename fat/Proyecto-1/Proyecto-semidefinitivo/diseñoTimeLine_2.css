@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 10;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 16px/1.5 'Helvetica Neue', sans-serif;
+  background: #455946;
+  color: #000000;
+  overflow-x: hidden;
+  padding-bottom: 0px;
+}
+
+/* INTRO SECTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.intro {
+  background: rgb(69 89 70);
+  padding: 100px 0;
+  font-family: 'Bruno Ace', cursive;
+  color: #fff;
+  text-shadow: 0 0 12px, 6px 6px 10px rgb(0, 0, 0);
+  letter-spacing: 5px;
+  background-image: url(https://images-ext-1.discordapp.net/external/DZzNuMI3n5Q4R66rABWRFuJ00m16PrVncdBBhY-sWE8/https/images2.alphacoders.com/130/1301855.jpg?width=1042&height=586);
+  border-radius: 30px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  object-fit: cover;
+}
+
+.img {
+  height: 200px;
+}
+
+.a1 {
+  font-size: 1.5rem;
+  font-family: 'Bruno Ace', cursive;
+  font-weight: bold;
+  text-shadow: rgb(243, 232, 232) 0.1em 0.1em 0.2em;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.zelda ul {
+  background: #8f8f54;
+  padding: 50px 0;
+  border-radius: 30px;
+}
+
+.zelda ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
+  box-shadow: 0 0 10px;
+}
+
+.zelda ul li article {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background: #e2c15faf;
+}
+
+.zelda ul li article::before {
+  content: '';
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.zelda ul li article img {
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.zelda ul li:nth-child(odd) article::before {
+  left: -16px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #000000af transparent transparent;
+}
+
+.zelda ul li:nth-child(odd) article {
+  left: 45px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #b5922baf transparent transparent;
+}
+
+.zelda ul li:nth-child(even) article {
+  left: -439px;
+}
+
+.zelda ul li:nth-child(even) article::before {
+  right: -16px;
+  border-width: 8px 0px 8px 16px;
+  border-color: transparent transparent transparent #000000af;
+}
+
+article {
+  display: block;
+  font-size: 1rem;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: 0px;
+  box-shadow: 0 0 10px;
+}
+
+.zelda form {
+  display: grid;
+  grid-column: inherit;
+  align-content: center;
+  background: #e2c15faf;
+  text-shadow: #800000;
+}
+
+input#juego {
+  background-color: #b5b58b;
+  height: 35px;
+  color: #000000;
+  border-radius: 10px 100px / 120px;
+}
+
+input#portada {
+  background-color: #b5b58b;
+  height: 35px;
+  color: #000000;
+  border-radius: 10px 100px / 120px;
+}
+
+input#historia {
+  background-color: #b5b58b;
+  height: 35px;
+  color: #000000;
+  border-radius: 10px 100px / 120px;
+}
+
+button.action {
+  width: 120px;
+  height: 35px;
+  display: block;
+  padding: 0.5rem 1rem;
+  width: 200px;
+  margin: 0 auto;
+  border-radius: 10px 100px / 120px;
+  border: 2px solid #455946;
+  color: #000000;
+}
+
+button.action:hover {
+  background-color: #455946;
+  color: white;
+}
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+  .zelda ul li article {
+    width: 250px;
+  }
+  .zelda ul li:nth-child(even) article {
+    left: -289px;
+    /*250+45-6*/
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .zelda ul li {
+    margin-left: 20px;
+  }
+  .zelda ul li article {
+    width: calc(100vw - 91px);
+  }
+  .zelda ul li:nth-child(even) article {
+    left: 45px;
+  }
+  .zelda ul li:nth-child(even) article::before {
+    left: -16px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #000000af transparent transparent;
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.25);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
