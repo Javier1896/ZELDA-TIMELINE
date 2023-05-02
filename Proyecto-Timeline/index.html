@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIMELINE-ZELDA</title>
+    <link rel="stylesheet" href="./diseñoTimeLine.css" />
+    <script defer src="./timeline.js"></script>
+  </head>
+  <body>
+    <header class="intro">
+      <section class="container">
+        <h1>Timeline ZELDA</h1>
+      </section>
+    </header>
+
+    <main>
+      <section class="zelda">
+        <ul class="prueba"></ul>
+
+        <form name="juegos">
+          <input
+            type="text"
+            id="juego"
+            name="juego"
+            placeholder="Título y fecha"
+            minlength="6"
+            maxlength="255"
+            required
+          />
+          <input
+            type="url"
+            id="portada"
+            name="portada"
+            placeholder="Url de la Portada"
+            required
+          />
+          <input
+            type="text"
+            id="historia"
+            name="historia"
+            placeholder="Historia"
+            minlength="6"
+            required
+          />
+          <button class="action">Añadir historia</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      Fátima García || César Mercado || Joan M. Pugés || Javier Ruiz
+    </footer>
+  </body>
+</html>
