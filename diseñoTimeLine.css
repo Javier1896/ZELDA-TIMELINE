@@ -30,10 +30,14 @@ body {
   background-image: url(https://images-ext-1.discordapp.net/external/DZzNuMI3n5Q4R66rABWRFuJ00m16PrVncdBBhY-sWE8/https/images2.alphacoders.com/130/1301855.jpg?width=1042&height=586);
   border-radius: 30px;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 250%;
   object-fit: cover;
 }
 
+.container .intro {
+  box-sizing: border-box;
+  position: relative;
+}
 .img {
   height: 200px;
 }
@@ -46,7 +50,7 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
@@ -192,7 +196,7 @@ button.action:hover {
     margin-left: 20px;
   }
   .zelda ul li article {
-    width: calc(100vw - 91px);
+    width: calc(100vw - 80px);
   }
   .zelda ul li:nth-child(even) article {
     left: 45px;
