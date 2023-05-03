@@ -45,8 +45,6 @@ const zeldaInput = zeldaForm.elements.juego;
 const zelda1Input = zeldaForm.elements.historia;
 const zelda2Input = zeldaForm.elements.portada;
 
-/// Obtenemos un array de tweets del local storage. Si no existe, inicializamos con un
-// array vacío.
 let historia = JSON.parse(localStorage.getItem('zeldaForm.value')) || [];
 
 zeldaForm.addEventListener('submit', (event) => {
